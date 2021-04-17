@@ -8,18 +8,19 @@ const port = 4000
 let user = null;
 
 app.post('/register', (req, res) => {
-    user = req.body;
-    res.json({result: 'success'})
-})
+  res.status(200).json({
+    name: req.body.name,
+    user: req.body.email,
+    password: req.body.password
+  })
+});
 
 app.put('/login', (req, res) => {
-    const body = req.body;
-    if(user && user.email === body.email && user.password === body.password) {
-        res.json({result: 'success'})
-    } else {
-        res.json({result: 'error'})
-    }
-})
+  res.status(200).json({
+    user: req.body.email,
+    password: req.body.password
+  })
+});
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
