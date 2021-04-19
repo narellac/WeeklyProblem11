@@ -9,7 +9,7 @@ let user = null;
 
 app.post('/register', (req, res) => {
   res.status(200).json({
-    name: req.body.name,
+    name: req.body.fullname,
     user: req.body.email,
     password: req.body.password
   })
