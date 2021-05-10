@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Register</title>
+</head>
+<body>
+  <div id="body">
+    <form action="" name="log-in" id='loginForm'>
+      <legend>User registration</legend>
+      <div id="divName">
+        <label for="name">
+            Name
+        </label>
+        <input class="principal" type="text" id="name" required placeholder="Min 6 letters and 1 space" autofocus>
+        <span class="error">
+          The name must contain at least 6 letters and a space
+        </span>
+      </div>
+      <div id="divEmail">
+        <label for="email">
+          Email
+        </label>
+        <input class="principal" type="email" id="email" required placeholder="email@domail.com">
+        <span class="error">
+          The email must contain a valid format
+        </span>
+      </div>
+      <div id="divPass">
+        <label for="password">
+          Password
+        </label>
+        <input class="principal" type="password" id="password" required placeholder="Min. 8 - letters and numbers">
+        <span class="error">
+          The password must contain at least 8 characters, consisting of letters and numbers
+        </span>
+      </div>
+      <div id="divConfirm">
+        <label for="confirm">
+          Confirm Password
+        </label>
+        <input class="principal" type="password" id="confirm" required placeholder="Retype your password">
+        <span class="error">
+          Passwords do not match
+        </span>
+      </div>
+      <div id="divBtn">
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit" id="submit">
+      </div>
+      <a id="login" href="login.html" target="_blank">Log In</a>
+      <div id="hidden">
+      </div>
+    </form>
+  </div>
+  <script src="js/eventRegister.js"></script>
+</body>
+</html>

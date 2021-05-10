@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Log In</title>
+</head>
+<body>
+  <div id="body">
+    <form action="" name="log-in" id='loginForm'>
+      <legend>User login</legend>
+      <div id="divEmail">
+        <label for="email">
+          Email
+        </label>
+        <input type="email" id="email" required placeholder="email@domail.com" autofocus>
+        <span class = "error">
+          The email must contain a valid format
+        </span>
+      </div>
+      <div id="divPass">
+        <label for="password">
+          Password
+        </label>
+        <input type="password" id="password" required placeholder="Min. 8 - letters and numbers">
+        <span class = "error">
+          The password must contain at least 8 characters, consisting of letters and numbers
+        </span>
+      </div>
+      <div>
+        <input type="submit" value="Log In" id="submit">
+        <input type="reset" value="Reset" id="reset">
+      </div>
+      <a id="register" href="register.html" target="_blank">You do not have an account?</a>
+      <div id="hidden">
+      </div>
+    </form>
+  </div>
+  <script src="js/eventLogin.js"></script>
+</body>
+</html>

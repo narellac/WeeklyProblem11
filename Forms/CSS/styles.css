@@ -1,0 +1,96 @@
+form {
+  width: 25%;
+  border: 1px solid #ccc;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgb(241, 234, 234);
+}
+
+label {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+  display: inline;
+  width: 100%;
+}
+
+input {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1 px solid #ccc;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 14px;
+}
+
+input:focus {
+  border: 1 px solid black;
+}
+
+input[type="submit"], input[type="reset"] {
+  margin-bottom: 0;
+  background: #1668C4;
+  color: #fff;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+  background: #4A88f4;
+  cursor:pointer;
+}
+
+legend {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: none;
+  font-size: 15px;
+  color:blue;
+}
+
+.error {
+  color: red;
+  font-size: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: none;
+}
+
+#divname {
+  padding: 20px 0;
+}
+
+#divEmail {
+  padding: 20px 0;
+}
+
+#divPass {
+  padding: 20px 0;
+}
+
+#divConfirm {
+  padding: 20px 0;
+}
+
+#body {
+  margin-left: 500px;
+}
+
+#body form {
+  padding: 40px 40px ;
+}
+
+#hidden {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  text-align: center;
+  padding: 5px 10px 0px 10px;
+}
