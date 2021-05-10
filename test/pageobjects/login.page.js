@@ -1,3 +1,4 @@
+
 const page = require ('../pageobjects/page');
 
 class LoginPage extends page {
