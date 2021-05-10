@@ -8,7 +8,7 @@ class RegisterPage extends page {
     get btnSubmit () { return $('button[type="submit"]') }
 
     open () {
-        return super.open('register');
+        return super.open('https://narellac.github.io/WeeklyProblem09/register.html');
     }
 }
 

@@ -17,7 +17,7 @@ class LoginPage extends page {
 
     //login path
     open () {
-        return super.open('login');
+        return super.open('https://narellac.github.io/WeeklyProblem09/login.html');
     }
     submit () {
         this.btnSubmit.click()

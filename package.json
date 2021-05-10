@@ -3,8 +3,11 @@
   "version": "0.0.2",
   "description": "Resolution of task 14",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "test": "npx wdio run ./wdio.conf.js --specs"
+    "test": "npx wdio run ./wdio.conf.js"
   },
   "jest": {
     "transform": {
