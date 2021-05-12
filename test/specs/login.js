@@ -15,34 +15,41 @@ describe('Login credentials verification', () => {
         LoginPage.email.setValue('narella@')
         LoginPage.password.setValue('Contraseña')
         LoginPage.submit()
-        expect(LoginPage.alertEmail).toHaveText('Invalid email address.')
-        expect(LoginPage.alertPassword).toHaveText('Invalid password.')
-        browser.pause(2000);
-    })
-    it('should deny access when providing a correct username and a wrong password', () => {
-        LoginPage.email.setValue('narella@gmail.com')
-        LoginPage.password.setValue('Contraseña')
-        LoginPage.submit()
-        expect(LoginPage.alertPassword).toHaveText('Invalid password.')
-        browser.pause(2000);
-    })
-    it('should allow access when providing correct inputs', () => {
-        LoginPage.email.setValue('narella@gmail.com')
-        LoginPage.password.setValue('Contraseña1122')
-        LoginPage.submit()
-        expect(LoginPage.alertPassword).not.toBeDisplayed('Invalid password.')
-        expect(LoginPage.alertEmail).not.toBeDisplayed('Invalid email address.')
-        expect(LoginPage.alertResult).toBeDisplayed('Your login data is: narella@gmail.com  Contraseña1122')
+        expect(LoginPage.alertEmail).toHaveText('The email must contain a valid format')
+        expect(LoginPage.alertPassword).toHaveText('The password must contain at least 8 characters, consisting of letters and numbers')
         browser.pause(2000);
     })
 });
-describe('Login form', () => {
+describe('Login credentials verification two', () => {
+    it('should deny access when providing a correct username and a wrong password', () => {
+        LoginPage.open ();
+        LoginPage.email.setValue('narella@gmail.com')
+        LoginPage.password.setValue('Contraseña')
+        LoginPage.submit()
+        expect(LoginPage.alertPassword).toHaveText('The password must contain at least 8 characters, consisting of letters and numbers')
+        browser.pause(2000);
+    })
+});
+describe('Login credentials verification three', () => {
     it('should deny access when providing a wrong username and leaving the passcode field empty', () => {
         LoginPage.open ();
         LoginPage.email.setValue('Narella')
         LoginPage.password.setValue('')
         LoginPage.submit()
-        expect(LoginPage.alertEmail).toHaveText('Invalid email address.')
+        expect(LoginPage.alertEmail).toHaveText('The email must contain a valid format')
+        expect(LoginPage.alertPassword).toHaveText('The password must contain at least 8 characters, consisting of letters and numbers')
+        browser.pause(2000);
+    })
+});
+describe('Login form', () => {
+    it('should allow access when providing correct inputs', () => {
+        LoginPage.open ();
+        LoginPage.email.setValue('narella@gmail.com')
+        LoginPage.password.setValue('Contraseña1122')
+        LoginPage.submit()
+        expect(LoginPage.alertPassword).not.toBeDisplayed('The password must contain at least 8 characters, consisting of letters and numbers')
+        expect(LoginPage.alertEmail).not.toBeDisplayed('The email must contain a valid format')
+        expect(LoginPage.alertResult).toBeDisplayed('Your login data is: narella@gmail.com  Contraseña1122')
         browser.pause(2000);
     })
 });

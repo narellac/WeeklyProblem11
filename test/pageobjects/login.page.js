@@ -12,8 +12,8 @@ class LoginPage extends page {
     get btnReset () { return $('#reset') }
 
     //alerts selectors
-    get alertEmail () {return $$('.error')[0]}
-    get alertPassword () {return $$('.error')[1]}
+    get alertEmail () {return $('#error1')}
+    get alertPassword () {return $('#error2')}
     get alertResult () {return $ ('#hidden')}
 
     //login path
